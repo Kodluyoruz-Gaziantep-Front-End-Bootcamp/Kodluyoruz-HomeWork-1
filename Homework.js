@@ -1,13 +1,13 @@
-let arr1 = ['2', 'a', '3', 3, 4, 3, 5, 5]
-let arr2 = ['c', 'c', 'h', 1, 1, 1, 4]
+let arr1 = ["2", "a", "3", 3, 4, 3, 5, 5];
+let arr2 = ["c", "c", "h", 1, 1, 1, 4];
 let arr3 = [
-    { name: 'ali', id: 221 },
-    { name: 'veli', id: 343 },
-    { name: 'konya', id: 333 },
-    { name: 'ali', id: 664 },
-    { name: 'selim', id: 112 }
-]
-let arr4 = [1, 1, 1, 4, 5, 5, 3, 2]
+  { name: "ali", id: 221 },
+  { name: "veli", id: 343 },
+  { name: "konya", id: 333 },
+  { name: "ali", id: 664 },
+  { name: "selim", id: 112 },
+];
+let arr4 = [1, 1, 1, 4, 5, 5, 3, 2];
 /* 
 ÖDEVV
 1- arr1 başına 'a' elemanını ekleyiniz
@@ -30,93 +30,89 @@ her sorunun cevabını console.log ile yazıdırın
 */
 
 // 1
-arr1.unshift("a")
-console.log(arr1)
+arr1.unshift("a");
+console.log("soru 1 => ", arr1);
 
 // 2
-arr1.push(6)
-console.log(arr1)
+arr1.push(6);
+console.log("soru 2 => ", arr1);
 
 // 3
-arr1.pop()
-console.log(arr1)
+arr1.pop();
+console.log("soru 3 => ", arr1);
 
 // 4
-arr1.shift()
-console.log(arr1)
+arr1.shift();
+console.log("soru 4 => ", arr1);
 
 // 5
-const newArray1 = arr1.concat(arr2)
-const newArray2 = [...arr1, ...arr2]
+const newArray1 = arr1.concat(arr2);
+const newArray2 = [...arr1, ...arr2];
 
-console.log(newArray1)
-console.log(newArray2)
+console.log("soru 5 => ", newArray1);
+console.log("soru 5 => ", newArray2);
 
 // 6
-function searchWorkman(arr,val) {
-    if(arr.includes(val)) {
-        return true
-    } else {
-        return false
-    }
+function searchWorkman(arr, val) {
+  if (arr.includes(val)) {
+    return true;
+  } else {
+    return false;
+  }
 }
-console.log(searchWorkman(arr2,"h"))
-
+console.log("soru 6 => ", searchWorkman(arr2, "h"));
 
 // 7
-console.log(arr2.indexOf('h'))
+console.log("soru 7 => ", arr2.indexOf("h"));
 
 // 8
-arr2.splice(0,4)
-console.log(arr2)
-let newArrays = arr2.slice(3, arr2.length - 1)
-console.log(newArrays)
-
+arr2.splice(0, 4);
+console.log("soru 8 => ", arr2);
+let newArrays = arr2.slice(0, arr2[arr2.length - 1]);
+console.log("soru 8 => ", newArrays);
 
 // 9
 function numArrays(arr) {
-    arr.map((item) => {
-        if((typeof item) === "string") {
-           let index = arr.indexOf(item)
-           return arr[index] = 0
-        }
-    })
-    console.log(arr)
+  arr.map((item) => {
+    if (typeof item === "string") {
+      let index = arr.indexOf(item);
+      return (arr[index] = 0);
+    }
+  });
+  console.log("soru 9 => ", arr);
 
-    return arr.reduce((a,b) => a + b, 0)
-
+  return arr.reduce((a, b) => a + b, 0);
 }
 
-console.log(numArrays(arr1))
+console.log("soru 9 => ", numArrays(arr1));
 
 // 10
 
 function numToString(arr) {
-    arr.map(item => {
-        let itemString = item.toString()
-        console.log(typeof itemString)
-    })
+  arr.map((item) => {
+    let itemString = item.toString();
+    console.log("soru 10 => ", typeof itemString);
+  });
 }
-numToString(arr1)
-
+numToString(arr1);
 
 // 11
-let findId = arr3.filter(x => x.id === 221)
-console.log(findId)
+let findId = arr3.filter((x) => x.id === 221);
+console.log("soru 11 => ", findId);
 
 // 12
-let usersAli = arr3.filter(user => user.name === 'ali')
-console.log(usersAli)
+let usersAli = arr3.filter((user) => user.name === "ali");
+console.log("soru 12 => ", usersAli);
 
 // 13
 function sumId(arr) {
-    let arrs = [];
+  let arrs = [];
 
-    for( let i = 0 ; i < arr.length ; i++) {
-        arrs.push(arr[i].id)
-    }
+  for (let i = 0; i < arr.length; i++) {
+    arrs.push(arr[i].id);
+  }
 
-   return arrs.reduce((a,b) => a + b,0)
+  return arrs.reduce((a, b) => a + b, 0);
 }
 
-console.log(sumId(arr3))
+console.log("soru 13 => ", sumId(arr3));
