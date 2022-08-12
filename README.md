@@ -12,6 +12,7 @@ let arr3 = [
 ]
 let arr4 = [1, 1, 1, 4, 5, 5, 3, 2]
 /* 
+
 ÖDEVV
 1- arr1 başına 'a' elemanını ekleyiniz
 2- arr1 sonuna 6 elemanını ekleyiniz
